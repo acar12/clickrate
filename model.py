@@ -3,10 +3,9 @@ The Naive Bayes classifier to work out if a title may
 be clickbait or not.
 """
 
-import re
 import pandas as pd
-from typing import List
 from math import log, exp
+from commons import clean_text
 
 df = pd.read_csv("data/words.csv")
 
@@ -18,11 +17,6 @@ def get_percent_of_word(clickbait: bool, word: str) -> float:
     except IndexError:
         return -1
 
-
-def clean_text(text: str) -> List[str]:
-    words = re.findall("[a-zA-Z]+", text.lower())
-    words = filter(lambda s: len(s) > 2, words)  # words with two or less characters won't really do much
-    return list(words)
 
 
 def predict_clickbait(text: str) -> float:
