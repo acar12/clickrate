@@ -1,0 +1,1 @@
+from clickrate.model import ClickbaitClassifier
