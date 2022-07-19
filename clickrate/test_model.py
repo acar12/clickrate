@@ -1,3 +1,7 @@
+"""
+Test the model to see if it actually works.
+"""
+
 from model import ClickbaitClassifier
 import pandas as pd
 import unittest
