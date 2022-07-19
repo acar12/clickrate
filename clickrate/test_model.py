@@ -2,6 +2,7 @@ from model import ClickbaitClassifier
 import pandas as pd
 import unittest
 from typing import Iterable
+from commons import get_headlines
 
 class TestModel(unittest.TestCase):
     def setUp(self):
@@ -24,19 +25,13 @@ class TestModel(unittest.TestCase):
         df = pd.read_csv("data/test_headlines.csv")
         accuracy = self.get_accuracy((row for _, row in df.iterrows()))
         self.assertGreaterEqual(accuracy, 0.8)
+        print(f"{int(accuracy * 100)}%")
 
     def test_model_list(self):
-        # a few headlines gathered from buzzfeed and reuters (7/17/2022)
-        # this is to see if it works with modern forms of clickbait
-        accuracy = self.get_accuracy((
-            ("This Sorting Quiz Will Tell You Which Hogwarts House You Truly Belong In", 1),
-            ("Find Out Which Deadly Sin Best Describes Your Cold, Dark Heart", 1),
-            ("Everyone Has A Disney Villain Alter Ego — Here's Yours", 1),
-            ("'Climate change affects everyone': Europe battles wildfires in intense heat", 0),
-            ("Ukraine's president fires security service chief and prosecutor general", 0),
-            ("Sudan protesters decry violence in southern state", 0)
-        ))
+        # a few headlines gathered from buzzfeed and reuters to test modern media
+        accuracy = self.get_accuracy(get_headlines())
         self.assertGreaterEqual(accuracy, 0.8)
+        print(f"{int(accuracy * 100)}%")
 
 if __name__ == "__main__":
     unittest.main()
