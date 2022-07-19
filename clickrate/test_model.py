@@ -1,15 +1,18 @@
-from model import predict_clickbait
+from model import NaiveBayesClassifier
 import pandas as pd
 import unittest
 from typing import Iterable
 
 class TestModel(unittest.TestCase):
+    def setUp(self):
+        self.model = NaiveBayesClassifier()
+
     def get_accuracy(self, iterable: Iterable[tuple[str, int]]) -> float:
         avg_accuracy = 0
         num_rows = 0
 
         for word, val in iterable:
-            guess = round(predict_clickbait(word))
+            guess = round(self.model.predict_clickbait(word))
             if guess == val:
                 avg_accuracy += 1
             num_rows += 1
