@@ -1,11 +1,11 @@
-from model import NaiveBayesClassifier
+from model import ClickbaitClassifier
 import pandas as pd
 import unittest
 from typing import Iterable
 
 class TestModel(unittest.TestCase):
     def setUp(self):
-        self.model = NaiveBayesClassifier()
+        self.model = ClickbaitClassifier()
 
     def get_accuracy(self, iterable: Iterable[tuple[str, int]]) -> float:
         avg_accuracy = 0

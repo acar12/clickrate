@@ -8,7 +8,7 @@ from math import log, exp
 from commons import clean_text
 
 
-class NaiveBayesClassifier:
+class ClickbaitClassifier:
     def __init__(self):
         self.df = pd.read_csv("data/words.csv")
         self.df_cache = {} # caching turned 47 seconds of testing into 17 seconds
