@@ -3,11 +3,11 @@ Basic API just so apps can use the model.
 """
 
 from fastapi import FastAPI
-from clickrate import ClickbaitClassifier
+from model import ClickbaitClassifier
 
 app = FastAPI()
 model = ClickbaitClassifier()
 
-@app.route("/{text}")
+@app.get("/{text}")
 async def get_accuracy(text: str) -> float:
-    return {"accuracy": model.predict_clickbait(text)}
+    return {"clickbait": model.predict_clickbait(text)}
