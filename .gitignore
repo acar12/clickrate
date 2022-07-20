@@ -1,5 +1,3 @@
-# csv file is ~40k lines, just run `python get_words.py`
-words.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
