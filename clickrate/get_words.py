@@ -5,7 +5,7 @@ by if it's clickbait or not from 'headlines.csv'.
 
 import pandas as pd
 from collections import Counter
-from commons import clean_text, get_path
+from clickrate.commons import clean_text, get_path
 
 def read_and_write(read_file: str, write_file: str) -> None:
     df: pd.DataFrame = pd.read_csv(read_file)

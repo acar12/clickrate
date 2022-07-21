@@ -5,7 +5,7 @@ be clickbait or not.
 
 import pandas as pd
 from math import log, exp
-from commons import clean_text, get_path
+from clickrate.commons import clean_text, get_path
 
 
 class ClickbaitClassifier:

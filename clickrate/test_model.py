@@ -2,11 +2,11 @@
 Test the model to see if it actually works.
 """
 
-from model import ClickbaitClassifier
+from clickrate.model import ClickbaitClassifier
 import pandas as pd
 import unittest
 from typing import Iterable
-from commons import get_headlines, get_path
+from clickrate.commons import get_headlines, get_path
 
 class TestModel(unittest.TestCase):
     def setUp(self):
