@@ -5,12 +5,12 @@ be clickbait or not.
 
 import pandas as pd
 from math import log, exp
-from commons import clean_text
+from commons import clean_text, get_path
 
 
 class ClickbaitClassifier:
     def __init__(self):
-        self.df = pd.read_csv("data/words.csv")
+        self.df = pd.read_csv(get_path("data/words.csv"))
         self.df_cache = {} # caching turned 47 seconds of testing into 17 seconds
     
     def get_percent_of_word(self, clickbait: bool, word: str) -> float:

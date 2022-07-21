@@ -2,6 +2,7 @@
 Common patterns across the project.
 """
 
+import os
 import re
 import requests
 from bs4 import BeautifulSoup as Soup
@@ -22,3 +23,6 @@ def get_headlines():
     soup = Soup(content, "html.parser")
     for e in soup.find_all(class_="headline-0-2-153"):
         yield e.contents[0], 0
+
+def get_path(file_name: str) -> str:
+    return str(os.path.join(os.path.dirname(__file__), file_name))

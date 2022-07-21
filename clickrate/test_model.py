@@ -6,7 +6,7 @@ from model import ClickbaitClassifier
 import pandas as pd
 import unittest
 from typing import Iterable
-from commons import get_headlines
+from commons import get_headlines, get_path
 
 class TestModel(unittest.TestCase):
     def setUp(self):
@@ -26,7 +26,7 @@ class TestModel(unittest.TestCase):
         return avg_accuracy
 
     def test_model_csv(self):
-        df = pd.read_csv("data/test_headlines.csv")
+        df = pd.read_csv(get_path("data/test_headlines.csv"))
         accuracy = self.get_accuracy((row for _, row in df.iterrows()))
         self.assertGreaterEqual(accuracy, 0.8)
         print(f"{int(accuracy * 100)}%")
