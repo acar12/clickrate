@@ -1,7 +1,7 @@
 # run for debug:
-# uvicorn api:app --reload
+# uvicorn website.api:app --reload
 # for website:
-# uvicorn api:app --workers 4
+# uvicorn website.api:app --workers 4
 
 from starlite import Starlite, get
 from clickrate import ClickbaitClassifier as Model
