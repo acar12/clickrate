@@ -1,0 +1,1 @@
+const appDiv = ReactDOM
