@@ -10,4 +10,4 @@ app = FastAPI()
 async def predict_clickbait(text: str) -> JSONResponse:
     return {"percent_clickbait": model.predict_clickbait(text)}
 
-app.mount("/", StaticFiles(directory="static"), name="static")
+app.mount("/", StaticFiles(directory="frontend/build"), name="frontend")
