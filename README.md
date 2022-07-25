@@ -4,10 +4,10 @@ A classifier using Naive Bayes to figure out if
 a headline may be clickbait or not.
 
 ## run website
-> cd frontend
-> npm run build
-> cd ..
-> uvicorn api.main:app --reload
+> cd frontend <br>
+> npm run build <br>
+> cd .. <br>
+> uvicorn api.main:app --reload <br>
 After that go to 127.0.0.1:8000/index.html (or whatever the URL is).
 
 ## data
