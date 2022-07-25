@@ -11,10 +11,10 @@ The model works by using the [Bayes Theorem](https://en.wikipedia.org/wiki/Bayes
 Where `A` is the event that the headline is clickbait, and `B` is the event where the headline contains a certain word (which affects if it's clickbait or not).
 `B` doesn't have to be just one word though, as there can be multiple words that affect event `B`. The frequencies of these words are used as data for the model.
 
-P(A) - % chance that headline is clickbait
-P(not A) - not clickbait
-P(B | A) - % of clickbait headlines containing words found in the text
-P(B | not A) - % of normal headlines containing words found in the text
+P(A) - % chance that headline is clickbait<br>
+P(not A) - not clickbait<br>
+P(B | A) - % of clickbait headlines containing words found in the text<br>
+P(B | not A) - % of normal headlines containing words found in the text<br>
 
 Since the data is practically split 50/50 for clickbait and non-clickbait data, we don't really need to include it in the final calculation, 
 since the 50% would just cancel out each other.
