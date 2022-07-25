@@ -2,6 +2,7 @@
 
 A classifier using Naive Bayes to figure out if
 a headline may be clickbait or not.
+[How does it work?](HOWITWORKS.md)
 
 ## run website
 `cd frontend` <br>
