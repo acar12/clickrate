@@ -7,7 +7,7 @@ a headline may be clickbait or not.
 `cd frontend` <br>
 `npm run build` <br>
 `cd ..` <br>
-`uvicorn api.main:app` --reload <br>
+`uvicorn api.main:app --reload` <br>
 After that go to 127.0.0.1:8000/index.html (or whatever the URL is).
 
 ## data
