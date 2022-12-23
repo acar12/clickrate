@@ -20,3 +20,6 @@ After that go to 127.0.0.1:8000/index.html (or whatever the URL is).
 Run `python test_model.py -v` to see for yourself.<br>
 Test 1 - 92%<br>
 Test 2 - 86%
+
+## some model issues
+- only 2 sources for news used to scrape
